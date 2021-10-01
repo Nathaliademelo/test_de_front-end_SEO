@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet"></style>
+    <meta charset="UTF-8">
+
+  <!-- SEO Geral -->
+  <title>Apple Suplementos</title>
+  <meta name="description" content="E-commerce voltado para o público fitness, com a comercialização de suplementos.">
+  <link rel="canonical" href="www.applesuplementos.com.br">
+  <meta name="author" content="Apple Suplementos">
+  <meta name="robots" content="index">
+
+  <!-- Google+ / Schema.org -->
+  <meta itemprop="name" content="Apple Suplementos">
+  <meta itemprop="description" content="E-commerce voltado para o público fitness, com a comercialização de suplementos.">
+  <meta itemprop="image" content="https://applesuplementos.com/imagem.png">
+  <link href="https://plus.google.com/applesuplementos" rel="publisher">
+  
+  <!-- Open Graph Facebook -->
+  <meta property="og:title" content="Apple Suplementos">
+  <meta property="og:description" content="E-commerce voltado para o público fitness, com a comercialização de suplementos."/>
+  <meta property="og:url" content="www.applesuplementos.com.br">
+  <meta property="og:site_name" content="Apple Suplementos"/>
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://applesuplementos.com/imagem.png">
+</head>
+
+<body id="body">
+ 
+  <div id="Principal">
+    <h1> Apple Suplementos </h1> <hr>
+    <h3> Os Melhores Preços Nas Melhores Marcas</h3>
+    
+    <p> Ver carrinho <a href="#" onclick="return show('Carrinho','Principal');"> <img src="assets/images/carrinho.png" id="img_carrinho" onclick="exibeValorCarrinho()"> </img> </a> </p>
+       
+    <table id="itens">
+        
+        <tr>
+            <td id="foto"><img src="assets/images/Creatina-Hardcore-Reload.jpg" id="produto1"></img></td>
+            <td id="nome">Creatina Hardcore Reload (300 g)  Integralmédica</td>
+            <td id="descricao">Adicione a Creatina Monohidratada Hardcore Reload da IntegralMédica na sua dieta para ajudar
+                a potencializar os seus resultados nos treinos. A cretina é uma substância derivada de aminoácidos
+                que age como reserva de energia nas células dos músculos. Podendo ser consumida como suplemento 
+                pré-treino, a creatina monohidratada ajuda a hidratar a musculatura enquanto você malha, promovendo
+                o aumento, força e firmeza. O suplemento de creatina da IntegralMédica oferece um ótimo custo x 
+                benefício, pois a embalagem conta com 300 gramas que rende porções para você usufruir de uma 
+                suplementação de qualidade por mais tempo, e sentir sua evolução nos treinos.</td>
+            <td id="preco">R$79,99</td>
+            <td id="fotocarrinho"> <input type="image" src="assets/images/carrinho.png" name="Carrinho" id="carrinho_img" onclick="Adicionar('Creatina Hardcore Reload',1,'79.99',1);"> </td>
+        </tr>
+        
+        <tr>
+            <td id="foto"><img src="assets/images/best-diamond-protein-2kg-best-body-sports-599a42af.jpg" id="produto2"></img></td>
+            <td id="nome">Best Diamond Protein  Danoninho (2Kg)  Best Body Sports</td>
+            <td id="descricao">Os BCAAs são aminoácidos de cadeia ramificada que funcionam como verdadeiros "blocos para construção
+                muscular" representando aproximadamente um terço do total de aminoácidos presentes na musculatura.</td>
+            <td id="preco">R$ 212,99</td>
+            <td id="fotocarrinho"><input type="image" src="assets/images/carrinho.png" name="Carrinho" id="carrinho_img" onclick="Adicionar('Best Diamond Protein',1,'212.99',2);"> </td>
+        </tr>
+        
+        <tr>
+            <td id="foto"><img src="assets/images/A05-0055-001_zoom1.jpg" id="produto3"></img></td>
+            <td id="nome">BCAA 2400 (450 Cápsulas)  Max Titanium</td>
+            <td id="descricao">O Best Diamond Protein é uma linha de saborização especial da Best Body Sports!
+                Nossos especialista em aroma, passaram meses atrás de aromas perfeitos, que tivesse um gosto
+                familiar, caseiro e que nos remetesse a boas memórias e sensações felizes.
+                E nessa busca, encontraram os sabores perfeitos: Toddynho, Danoninho e Leite Ninho. Três sabores
+                que todos nós conhecemos e reconhecemos assim que tomamos e o melhor de tudo é que são 
+                incrivelmente gostosos, sim, sabor é o forte da linha de proteínas da Best Body Sports.
+                Além disso tudo, ainda é um 3Whey, que lhe entrega, 25G de proteína por dose, com 5G de Bcaa e 
+                3G de Glutamina, apenas 3G de carboidratos e só 80Mg de sódio. Uma proteína leve, de rápida e 
+                fácil absorção e com um custo benefício incrível.</td>
+            <td id="preco">R$ 139,99</td>
+            <td id="fotocarrinho"><input type="image" src="assets/images/carrinho.png" name="Carrinho" id="carrinho_img" onclick="Adicionar('BCAA 2400',1,'139.99',3);"> </td>
+        </tr>
+    
+    </table>
+  
+  </div>
+ 
+  <div id="Carrinho">
+    <h1 >Carrinho</h1>
+   
+    <table id="TabelaCarrinho">
+    
+        <tr>
+            <td><div>Total: <span id="total"></span></div></td>
+        </tr>
+    </table>
+    
+   <p id="Voltar"> <a href="#" onclick="return show('Principal','Carrinho');">Voltar</a> </p>
+   <p id="Limpar Carrinho"> <a href="#" onclick=" localStorage.clear(); location.reload();">Limpar Carrinho</a> </p>
+  </div>
+  
+  
+  <h4> Quer receber nossas novidades? Deixe aqui seu email!</h4>
+  <form>
+         <label for="nome">Nome:</label>
+         <input id="nome" type="text">
+         <label for="email">Email:</label>
+         <input id="email" type="email">
+         <label for="telefone">Telefone:</label>
+         <input id="telefone" type="number">
+  <button id="botaoEnviar" onclick="validaFormulario()">Enviar</button>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+ 
+</html>
